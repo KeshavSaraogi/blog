@@ -1,6 +1,6 @@
 .link {
     cursor: pointer;
-}
+  }
   
 .burger {
     width: 20px;
@@ -17,7 +17,7 @@
     background-color: var(--textColor);
 }
   
-.responsiveMenu{
+.responsiveMenu {
     position: absolute;
     top: 100px;
     left: 0;
@@ -38,7 +38,8 @@
       display: flex;
     }
   
-    .link{
+    .link {
       display: none;
     }
 }
+  
