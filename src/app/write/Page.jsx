@@ -7,7 +7,7 @@ import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.bubble.css'
 
 const Page = () => {
-  const [open, setpen] = useState(false)
+  const [open, setOpen] = useState(false)
   const [value, setValue] = useState("")
 
   return (

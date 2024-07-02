@@ -1,6 +1,6 @@
 import CardList from "@/components/cardList/CardList";
 import styles from "./singlePage.module.css";
-import Menu from "@/components/menu/Menu";
+import Menu from "@/components/Menu/Menu";
 import Comments from '@/components/comments/Comments'
 
 const BlogPage = ({ searchParams }) => {
