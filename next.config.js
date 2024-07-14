@@ -4,8 +4,7 @@ const nextConfig = {
     domains: ["lh3.googleusercontent.com", "firebasestorage.googleapis.com"],
   },
   experimental: {
-    reactRoot: true,
-    serverComponents: true,
+    appDir: true
   },
 };
 
