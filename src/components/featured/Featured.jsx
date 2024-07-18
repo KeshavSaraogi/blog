@@ -8,7 +8,7 @@ const Featured = () => {
     <div className={styles.container}>
       <header>
         <h1 className={styles.title}>
-          <b>Hey, lama dev here!</b> Discover my stories and creative ideas.
+          <b>Welcome To Keshav Blogs</b> 
         </h1>
       </header>
       <article className={styles.post}>

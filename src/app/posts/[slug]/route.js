@@ -1,3 +1,4 @@
+import { NextResponse } from 'next/server';
 import Menu from "@/components/Menu/Menu";
 import styles from "./singlePage.module.css";
 import Image from "next/image";
@@ -15,9 +16,32 @@ const getData = async (slug) => {
   return res.json();
 };
 
+export const GET = async (req, { params }) => {
+  const { slug } = params;
+  const data = await getData(slug);
+
+  return new Response(JSON.stringify(data), {
+    headers: { "Content-Type": "application/json" },
+  });
+};
+
+// Handle POST request
+export const POST = async (req) => {
+  const body = await req.json();
+  const newPost = await createPost(body);
+  return NextResponse.redirect(`/posts/${newPost.slug}`);
+};
+
+// Assume createPost function
+const createPost = async (body) => {
+  return {
+    ...body,
+    slug: "machine-learning-basics"
+  };
+};
+
 const SinglePage = async ({ params }) => {
   const { slug } = params;
-
   const data = await getData(slug);
 
   return (
@@ -59,4 +83,4 @@ const SinglePage = async ({ params }) => {
   );
 };
 
-export default SinglePage;
+export { SinglePage };
